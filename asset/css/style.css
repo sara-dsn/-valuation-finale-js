@@ -1,0 +1,54 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+.jardin {
+    max-width: 25%;
+    max-height: 25%;
+}
+
+.achat {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+html {
+    font-size: 100%;
+}
+.navig, footer {
+    background:black
+}
+.block {
+    display: inline-block;
+    background-color: black;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color:white;
+}
+
+header {
+    font-size: large;
+}
+
+.titre {
+    font-size: large;
+    text-align: end;
+    float: right;
+    margin-right: 30%;
+}
+
+header{
+    font-size: xx-large;
+}
+@media screen and (max-width:767px) {
+  
+    .block{
+        display: block;
+    }
+    .box{
+        display:none;
+        visibility: hidden;
+
+} 
+}
