@@ -16,12 +16,13 @@ function f_valid() {
 
 
     var mail = document.getElementById("email").value;
-    var e_manquant = document.getElementById("e_manquant");
+    var e_manquant = document.getElementById("e_manquant");  
+    
     var e_validation=/^[a-z]+[@a-z]+[.a-z]+$/;
 
     var date = document.getElementById("date").value;
     var d_manquant = document.getElementById("d_manquant");
-    var d_validation=/^[0-9]?\/[0-9]?\/[0-9]?$/;
+    var d_validation=/^[0-9]+[-0-9]+[-0-9]+$/;
 
     var question = document.getElementById("question").value;
     var q_manquant = document.getElementById("q_manquant");
@@ -52,7 +53,7 @@ function f_valid() {
     n_manquant.textContent ="";
 };
     
-    if (p_validation.test(prenom)==false) {
+    if (p_validation.test(prenom)==false) {   
         p_manquant.textContent = "Entrez votre prénom (seulement en minuscules)s'il vous plaît.";
         p_manquant.style.color = "red";
     }
@@ -62,6 +63,7 @@ function f_valid() {
     
    
     if (d_validation.test(date)==false) {
+        alert(date);
         d_manquant.textContent = "Entrez votre date de naissance s'il vous plaît.";
         d_manquant.style.color = "red";
     }
@@ -106,6 +108,7 @@ function f_valid() {
 
        if (q_validation.test(question)==false) {
         q_manquant.textContent = "Entrez votre question(seulement en minuscules) s'il vous plaît.";
+   
         q_manquant.style.color = "red";
     }
     else {
